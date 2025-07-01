@@ -6,7 +6,7 @@ import { StatsOverview } from "@/components/stats-overview";
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-900/20 via-background to-purple-900/20 relative">
-      {/* Apply the same gradient background to all sections */}
+      
       {/* Hero Section */}
       <Hero />
 

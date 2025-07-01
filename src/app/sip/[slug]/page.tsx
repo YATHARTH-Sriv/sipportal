@@ -5,7 +5,7 @@ import { AISummarySection } from "@/components/ai-summary-section";
 import { ArrowLeft, ExternalLink, Calendar, User, Tag, Sparkles } from "lucide-react";
 import Link from "next/link";
 
-// Configure marked for better HTML output
+
 marked.setOptions({
   breaks: true,
   gfm: true,
@@ -13,7 +13,7 @@ marked.setOptions({
 
 async function getSipData(slug: string) {
   try {
-    // First try to get from our API for consistent metadata
+    
     const apiRes = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'}/api/sips`, {
       cache: 'no-store'
     });
@@ -52,7 +52,7 @@ async function getSipData(slug: string) {
 
 function extractTitleFromContent(content: string) {
   const titleMatch = content.match(/(?:^|\n)#\s+(.+)/);
-  return titleMatch?.[1] || 'Untitled SIP';
+  return titleMatch?.[1] || 'Understanding SIP has never been this easy';
 }
 
 export default async function SipDetailPage({ params }: { params: Promise<{ slug: string }> }) {
