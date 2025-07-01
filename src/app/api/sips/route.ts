@@ -17,7 +17,7 @@ function extractSipMetadata(content: string, filename: string): SipMetadata {
   const sipNumber = parseInt(filename.match(/sip-(\d+)/)?.[1] || '0');
   
   // Try to parse metadata table first (more reliable)
-  let metadata: any = {};
+  const metadata: any = {};
   const tableMatch = content.match(/\|\s*([^|]+)\s*\|\s*([^|]+)\s*\|/g);
   if (tableMatch) {
     tableMatch.forEach(row => {
