@@ -76,34 +76,36 @@ export function SipCard({ sip, viewMode = 'grid', category = 'core' }: SipCardPr
             </h3>
             <p className="text-muted-foreground text-sm line-clamp-2 leading-relaxed">{description}</p>
           </div>
-          <div className="flex gap-2 ml-4">
+          <div className="flex flex-col gap-2 ml-4 min-w-0">
             <Link
               href={`/sip/${sip.filename}`}
-              className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium text-primary bg-primary/10 border border-primary/20 rounded-lg hover:bg-primary/20 transition-colors"
+              className="inline-flex items-center justify-center gap-1 px-3 py-1.5 text-sm font-medium text-primary bg-primary/10 border border-primary/20 rounded-lg hover:bg-primary/20 transition-colors whitespace-nowrap"
             >
               <Sparkles className="w-4 h-4" />
               AI Summary
             </Link>
-            <a
-              href={`https://github.com/sui-foundation/sips/blob/main/sips/${sip.filename}`}
-              className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium text-muted-foreground bg-muted/10 border border-border rounded-lg hover:bg-muted/20 transition-colors"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <ExternalLink className="w-4 h-4" />
-              GitHub
-            </a>
-            {sip.discussions && (
+            <div className="flex gap-1">
               <a
-                href={sip.discussions}
-                className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-lg hover:bg-blue-500/20 transition-colors"
+                href={`https://github.com/sui-foundation/sips/blob/main/sips/${sip.filename}`}
+                className="flex-1 inline-flex items-center justify-center gap-1 px-2 py-1.5 text-xs font-medium text-muted-foreground bg-muted/10 border border-border rounded-lg hover:bg-muted/20 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <ExternalLink className="w-4 h-4" />
-                Discussion
+                <ExternalLink className="w-3 h-3" />
+                GitHub
               </a>
-            )}
+              {sip.discussions && (
+                <a
+                  href={sip.discussions}
+                  className="flex-1 inline-flex items-center justify-center gap-1 px-2 py-1.5 text-xs font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-lg hover:bg-blue-500/20 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink className="w-3 h-3" />
+                  Discussion
+                </a>
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -142,34 +144,36 @@ export function SipCard({ sip, viewMode = 'grid', category = 'core' }: SipCardPr
         </div>
       )}
       
-      <div className="flex gap-3">
+      <div className="flex flex-col gap-2">
         <Link
           href={`/sip/${sip.filename}`}
-          className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium text-primary-foreground bg-primary border border-transparent rounded-xl hover:bg-primary/90 transition-colors"
+          className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium text-primary-foreground bg-primary border border-transparent rounded-xl hover:bg-primary/90 transition-colors"
         >
           <Sparkles className="w-4 h-4" />
           AI Summary
         </Link>
-        <a
-          href={`https://github.com/sui-foundation/sips/blob/main/sips/${sip.filename}`}
-          className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium text-muted-foreground bg-muted/10 border border-border rounded-xl hover:bg-muted/20 transition-colors"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <ExternalLink className="w-4 h-4" />
-          GitHub
-        </a>
-        {sip.discussions && (
+        <div className="flex gap-2">
           <a
-            href={sip.discussions}
-            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-xl hover:bg-blue-500/20 transition-colors"
+            href={`https://github.com/sui-foundation/sips/blob/main/sips/${sip.filename}`}
+            className="flex-1 inline-flex items-center justify-center gap-1 px-3 py-2 text-sm font-medium text-muted-foreground bg-muted/10 border border-border rounded-xl hover:bg-muted/20 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
           >
             <ExternalLink className="w-4 h-4" />
-            Join Discussion
+            GitHub
           </a>
-        )}
+          {sip.discussions && (
+            <a
+              href={sip.discussions}
+              className="flex-1 inline-flex items-center justify-center gap-1 px-3 py-2 text-sm font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-xl hover:bg-blue-500/20 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ExternalLink className="w-4 h-4" />
+              Discussion
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );
