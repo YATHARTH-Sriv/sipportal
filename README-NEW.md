@@ -5,31 +5,13 @@ A modern, AI-powered web portal for exploring Sui Improvement Proposals (SIPs) w
 ## ✨ Features
 
 - **🤖 AI-Powered Summaries**: Get intelligent, structured summaries of complex SIPs using OpenAI GPT-4
-- **📝 Enhanced Descriptions**: Beginner-friendly descriptions extracted from SIP abstracts and content
-- **🏷️ Smart Categorization**: Automatic categorization based on SIP content (Core, Framework, Staking, Gas, Security, etc.)
-- **🎨 Modern Dark UI**: Clean, accessible design with dark theme optimized for readability
-- **🔍 Advanced Search & Filtering**: Search through SIPs by title, description, and content with category/status filters
-- **📱 Responsive Design**: Works perfectly on desktop, tablet, and mobile with optimized layouts
-- **⚡ Real-time Updates**: Fetches ALL SIPs from the official Sui repository (13+ SIPs and growing)
-- **🎯 Comprehensive Metadata**: Displays status, type, category, author, creation date, and discussions
-- **📊 Multiple View Modes**: Grid and list views with detailed metadata display
-- **🔗 GitHub Integration**: Direct links to view SIPs on GitHub and discussion threads
-- **⚡ Performance Optimized**: Batched API requests with caching for fast loading
-
-## 🆕 Recent Improvements
-
-### Enhanced SIP Extraction & Display
-- **Better Description Extraction**: Now extracts descriptions from Abstract sections for clarity
-- **Improved Metadata Parsing**: Enhanced parsing of SIP metadata tables and YAML frontmatter
-- **Beginner-Friendly Language**: Descriptions are rewritten to be more accessible to newcomers
-- **Complete SIP Coverage**: Fetches all 13+ SIPs from the repository (previously limited)
-- **Smart Categorization**: Automatically categorizes SIPs based on official categories and content analysis
-
-### UI/UX Enhancements
-- **Enhanced Category System**: Support for all official SIP categories (Core, Framework, Networking, Interface, Application, etc.)
-- **Better Status Indicators**: Visual status badges for all SIP states (Final, Draft, Review, Living, Stagnant, Withdrawn)
-- **Improved Card Design**: Better description display with proper line spacing and truncation
-- **Advanced Filtering**: Filter by both category and status with improved UI controls
+- **🎨 Modern UI**: Clean, responsive design with Tailwind CSS
+- **🔍 Smart Search**: Search through SIPs by title and content
+- **📱 Responsive Design**: Works perfectly on desktop, tablet, and mobile
+- **⚡ Real-time Updates**: Fetches the latest SIPs from the official Sui repository
+- **🏷️ Status Tracking**: Visual indicators for SIP status (Draft, Review, Accepted, Final, etc.)
+- **📊 Multiple View Modes**: Grid and list views for different browsing preferences
+- **🔗 GitHub Integration**: Direct links to view SIPs on GitHub
 
 ## 🚀 Getting Started
 
@@ -153,16 +135,3 @@ This project is licensed under the MIT License.
 - [OpenAI](https://openai.com) for GPT-4 API
 - [Next.js](https://nextjs.org) team for the amazing framework
 - [Tailwind CSS](https://tailwindcss.com) for the utility-first CSS framework
-
-## 🐛 Bug Fixes
-
-### Next.js 15 Compatibility
-- **Fixed Dynamic Route Params**: Updated SIP detail page to properly await `params` before accessing properties
-- **Enhanced Type Safety**: Added comprehensive TypeScript interfaces for better type checking
-- **Improved Error Handling**: Better fallback strategies for API failures
-
-### Recent Fixes (July 2025)
-- Fixed Next.js 15 async params requirement in dynamic routes
-- Updated TypeScript interfaces for better type safety
-- Enhanced error handling and fallback mechanisms
-- Improved API response consistency

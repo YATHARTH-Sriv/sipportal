@@ -1,0 +1,289 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card: #111111;
+  --card-foreground: #ededed;
+  --primary: #3b82f6;
+  --primary-foreground: #f8fafc;
+  --secondary: #1f2937;
+  --secondary-foreground: #f3f4f6;
+  --muted: #374151;
+  --muted-foreground: #9ca3af;
+  --accent: #1f2937;
+  --accent-foreground: #f3f4f6;
+  --destructive: #ef4444;
+  --destructive-foreground: #fef2f2;
+  --border: #374151;
+  --input: #374151;
+  --ring: #3b82f6;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, monospace;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Custom prose styles for dark theme markdown rendering */
+.prose {
+  color: #e5e7eb;
+  max-width: none;
+}
+
+.prose h1 {
+  color: #f9fafb;
+  font-weight: 800;
+  font-size: 2.25em;
+  margin-top: 0;
+  margin-bottom: 0.8888889em;
+  line-height: 1.1111111;
+  border-bottom: 1px solid #374151;
+  padding-bottom: 0.3em;
+}
+
+.prose h2 {
+  color: #f9fafb;
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  line-height: 1.3333333;
+  border-bottom: 1px solid #4b5563;
+  padding-bottom: 0.3em;
+}
+
+.prose h3 {
+  color: #f3f4f6;
+  font-weight: 600;
+  font-size: 1.25em;
+  margin-top: 1.6em;
+  margin-bottom: 0.6em;
+  line-height: 1.6;
+}
+
+.prose h4, .prose h5, .prose h6 {
+  color: #f3f4f6;
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.5;
+}
+
+.prose p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  line-height: 1.75;
+}
+
+.prose a {
+  color: #60a5fa;
+  text-decoration: underline;
+  font-weight: 500;
+  text-decoration-color: #3b82f6;
+}
+
+.prose a:hover {
+  color: #93c5fd;
+  text-decoration-color: #60a5fa;
+}
+
+.prose strong {
+  color: #f9fafb;
+  font-weight: 600;
+}
+
+.prose ul, .prose ol {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  padding-left: 1.625em;
+}
+
+.prose li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose li::marker {
+  color: #9ca3af;
+}
+
+.prose pre {
+  color: #e5e7eb;
+  background-color: #1f2937;
+  overflow-x: auto;
+  font-size: 0.875em;
+  line-height: 1.7142857;
+  margin-top: 1.7142857em;
+  margin-bottom: 1.7142857em;
+  border-radius: 0.5rem;
+  padding: 1em 1.25em;
+  border: 1px solid #374151;
+}
+
+.prose code {
+  color: #fbbf24;
+  font-weight: 600;
+  font-size: 0.875em;
+  background-color: #1f2937;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  border: 1px solid #374151;
+}
+
+.prose pre code {
+  background-color: transparent;
+  border-width: 0;
+  border-radius: 0;
+  padding: 0;
+  font-weight: 400;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+.prose table {
+  width: 100%;
+  table-layout: auto;
+  text-align: left;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 0.875em;
+  line-height: 1.7142857;
+  border: 1px solid #374151;
+  border-radius: 0.5rem;
+}
+
+.prose thead {
+  border-bottom: 1px solid #4b5563;
+  background-color: #1f2937;
+}
+
+.prose thead th {
+  color: #f9fafb;
+  font-weight: 600;
+  vertical-align: bottom;
+  padding: 0.75em 1em;
+}
+
+.prose tbody td {
+  vertical-align: baseline;
+  padding: 0.75em 1em;
+  border-top: 1px solid #374151;
+}
+
+.prose blockquote {
+  font-weight: 500;
+  font-style: italic;
+  color: #d1d5db;
+  border-left: 4px solid #3b82f6;
+  quotes: "\201C""\201D""\2018""\2019";
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  padding-left: 1em;
+  background-color: #1f2937;
+  padding: 1em;
+  border-radius: 0.5rem;
+}
+
+.prose hr {
+  border-color: #374151;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(55, 65, 81, 0.3);
+}
+
+/* Shimmer effect for loading */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #374151 4%, #4b5563 25%, #374151 36%);
+  background-size: 1000px 100%;
+}
